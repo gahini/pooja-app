@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Om devotional logo">
+  <circle cx="32" cy="32" r="31" fill="#78251f" />
+  <circle cx="32" cy="32" r="27.5" fill="none" stroke="#e9c77d" stroke-width="1.5" />
+  <path d="M13 47.5h38M17 51h30" fill="none" stroke="#e9c77d" stroke-linecap="round" stroke-width="1" />
+  <text x="32" y="41" fill="#fff4dc" font-family="Noto Sans Devanagari, sans-serif" font-size="31" font-weight="600" text-anchor="middle">ॐ</text>
+</svg>
