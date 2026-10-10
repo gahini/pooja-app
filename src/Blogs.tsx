@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import type { MouseEvent } from 'react'
 import { ArrowRight } from 'lucide-react'
 
 type BlogsProps = {
