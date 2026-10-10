@@ -11,6 +11,7 @@ main#home { padding-top: 76px; }
 .main-nav a, .header-call { font-size: 13px; font-weight: 600; }
 .main-nav a { color: #49433b; transition: color .18s; }
 .main-nav a:hover { color: #a24b24; }
+.main-nav a[aria-current="page"] { color: #a24b24; }
 .header-call { min-height: 42px; display: inline-flex; align-items: center; gap: 9px; padding: 0 16px; color: #fffaf0; background: #74251f; border-radius: 3px; white-space: nowrap; }
 .mobile-menu-toggle { display: none; }
 .hero-section { position: relative; min-height: 590px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 5.5%; overflow: hidden; padding: 65px max(7vw, calc((100vw - 1160px) / 2)) 77px; background: #f5eee1; }

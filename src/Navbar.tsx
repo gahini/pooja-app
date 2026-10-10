@@ -3,9 +3,10 @@ import { Menu, X } from 'lucide-react'
 
 type NavbarProps = {
   onNavigate: (path: string) => void
+  currentPath: string
 }
 
-const Navbar = ({ onNavigate }: NavbarProps) => {
+const Navbar = ({ onNavigate, currentPath }: NavbarProps) => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
   function navigate(event: MouseEvent<HTMLAnchorElement>, path: string) {
@@ -43,10 +44,10 @@ const Navbar = ({ onNavigate }: NavbarProps) => {
         className={mobileMenuOpen ? 'main-nav is-open' : 'main-nav'}
         aria-label="Main navigation"
       >
-        <a href="/" onClick={(event) => navigate(event, '/')}>Home</a>
-        <a href="/services" onClick={(event) => navigate(event, '/services')}>Services</a>
-        <a href="/blogs" onClick={(event) => navigate(event, '/blogs')}>Blogs</a>
-        <a href="/contact" onClick={(event) => navigate(event, '/contact')}>Contact</a>
+        <a href="/" aria-current={currentPath === '/' ? 'page' : undefined} onClick={(event) => navigate(event, '/')}>Home</a>
+        <a href="/services" aria-current={currentPath === '/services' ? 'page' : undefined} onClick={(event) => navigate(event, '/services')}>Services</a>
+        <a href="/blogs" aria-current={currentPath === '/blogs' ? 'page' : undefined} onClick={(event) => navigate(event, '/blogs')}>Blogs</a>
+        <a href="/contact" aria-current={currentPath === '/contact' ? 'page' : undefined} onClick={(event) => navigate(event, '/contact')}>Contact</a>
       </nav>
     </header>
   )

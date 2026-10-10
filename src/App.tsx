@@ -34,14 +34,8 @@ function App() {
   useEffect(() => {
     function handlePopState() {
       const path = getCurrentPath()
-      if (!['/', '/services', '/blogs', '/contact'].includes(path)) {
-        window.history.replaceState({}, '', '/')
-        setCurrentPath('/')
-        setSelectedPuja('')
-      } else {
-        setCurrentPath(path)
-        setSelectedPuja(new URLSearchParams(window.location.search).get('service') ?? '')
-      }
+      setCurrentPath(path)
+      setSelectedPuja(new URLSearchParams(window.location.search).get('service') ?? '')
       window.scrollTo({ top: 0, behavior: 'auto' })
     }
 
@@ -104,7 +98,7 @@ function App() {
 
   return (
     <>
-      <Navbar onNavigate={navigate} />
+      <Navbar onNavigate={navigate} currentPath={currentPath} />
 
       <main id="home">
         {currentPath === '/services' && <Service onBook={bookService} />}
